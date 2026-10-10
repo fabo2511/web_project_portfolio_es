@@ -1,0 +1,481 @@
+/* 1. Ajustes generales */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fuentes del proyecto */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("./fonts/ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  background-color: #111116;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+/* 2. Encabezado */
+.header {
+  padding: 28px 8%;
+}
+
+.header__logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 3. Presentación */
+.hero {
+  min-height: 650px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(109, 109, 255, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(116, 55, 190, 0.18),
+      transparent 35%
+    );
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero__eyebrow {
+  color: #a5a5ff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero__title {
+  margin: 20px 0;
+  max-width: 600px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.hero__description {
+  max-width: 400px;
+  color: #c5c5d0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero__button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background-color: #6d6dff;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero__button:hover {
+  background-color: #8585ff;
+}
+
+.hero__image-container {
+  flex: 0 0 387px;
+  width: 387px;
+  max-width: 100%;
+}
+
+.hero__image {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Habilidades y herramientas */
+
+.skills {
+  padding: 60px 8%;
+}
+
+.skills__title {
+  margin: 0 0 32px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.skills__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* 4. Proyectos */
+.projects {
+  padding: 80px 8%;
+}
+
+.projects__title {
+  font-size: 36px;
+}
+
+.projects__description {
+  color: #c5c5d0;
+  line-height: 1.6;
+}
+
+/* Organización de las tarjetas */
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.project-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.project-card {
+  overflow: hidden;
+  border: 1px solid #30303b;
+  border-radius: 16px;
+  background-color: #1b1b24;
+}
+
+.project-card__image-container {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-card__image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.45));
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__content {
+  padding: 20px;
+}
+
+.project-card__title {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.project-card__description {
+  color: #c5c5d0;
+  line-height: 1.6;
+}
+/* 5. Pie de página */
+.footer {
+  padding: 28px 8%;
+  border-top: 1px solid #30303b;
+  color: #b5b5c5;
+}
+
+/* 6. Adaptación para celular */
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 22px 6%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 40px 6%;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .hero__content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero__image-container {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
+  .hero__image {
+    height: 280px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    overflow-wrap: break-word;
+  }
+
+  .projects {
+    width: 100%;
+    min-width: 0;
+    padding: 40px 16px;
+  }
+
+  .projects__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .skills {
+    padding: 40px 16px;
+  }
+
+  .skills__title {
+    font-size: 22px;
+  }
+
+  .skills__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 12px;
+    justify-items: center;
+  }
+
+  .skills__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .skills__item {
+    font-size: 14px;
+  }
+
+  .contact {
+    padding: 60px 16px;
+  }
+
+  .contact__title {
+    font-size: 28px;
+  }
+
+  .contact__description {
+    font-size: 16px;
+  }
+}
+/* Tabletas: entre 768px y 1023px */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding: 60px 5%;
+    gap: 24px;
+  }
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .hero__image-container {
+    flex: 0 1 240px;
+    width: 240px;
+    max-width: 100%;
+  }
+
+  .hero__image {
+    height: 310px;
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project-card__link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a5a5ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-card__link:hover {
+  text-decoration: underline;
+}
+
+/* Colores individuales de los iconos */
+
+.skills__icon--html {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(92%) saturate(1884%)
+    hue-rotate(350deg) brightness(97%);
+}
+
+.skills__icon--css {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(88%) saturate(1700%)
+    hue-rotate(185deg) brightness(95%);
+}
+
+.skills__icon--javascript {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(79%) saturate(800%)
+    hue-rotate(350deg) brightness(105%);
+}
+
+.skills__icon--git {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1300%)
+    hue-rotate(335deg) brightness(100%);
+}
+
+.skills__icon--github,
+.skills__icon--openai {
+  filter: brightness(0) invert(1);
+}
+/* Imagen provisional del segundo proyecto */
+
+.project-card__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #252547, #4848a0, #171722);
+}
+
+.project-card__placeholder-icon {
+  color: #ffffff;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 56px;
+}
+
+.project-card__placeholder-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-card__status {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a5a5ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Sección de contacto */
+
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(109, 109, 255, 0.18),
+    transparent 65%
+  );
+}
+
+.contact__title {
+  margin: 0 0 20px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 36px;
+}
+
+.contact__description {
+  margin: 0 auto 28px;
+  max-width: 500px;
+  color: #c5c5d0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact__button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background-color: #6d6dff;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact__button:hover {
+  background-color: #8585ff;
+}
+
+.contact__social {
+  margin-top: 28px;
+}
+
+.contact__link {
+  color: #a5a5ff;
+  text-decoration: none;
+}
+
+.contact__link:hover {
+  text-decoration: underline;
+}

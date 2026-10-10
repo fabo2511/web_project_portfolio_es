@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi portafolio | Desarrollador web</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="#">Mi portafolio</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">DESARROLLO WEB</p>
+
+          <h1 class="hero__title">Hola, soy desarrollador web.</h1>
+
+          <p class="hero__description">
+            Estoy aprendiendo a crear sitios web modernos, accesibles y
+            adaptables a diferentes dispositivos. Este es mi espacio para
+            compartir mis proyectos.
+          </p>
+
+          <a class="hero__button" href="#proyectos"> Ver mis proyectos </a>
+        </div>
+
+        <div class="hero__image-container">
+          <img
+            class="hero__image"
+            src="images/perfil.jpg"
+            alt="Fotografía de presentación"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de habilidades -->
+
+      <section class="skills" id="habilidades">
+        <h2 class="skills__title">Habilidades y herramientas</h2>
+
+        <ul class="skills__list">
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--html"
+              src="images/icons/html5.svg"
+              alt="HTML5"
+            />
+          </li>
+
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--css"
+              src="images/icons/css3.svg"
+              alt="CSS3"
+            />
+          </li>
+
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--javascript"
+              src="images/icons/javascript.svg"
+              alt="JavaScript"
+            />
+          </li>
+
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--git"
+              src="images/icons/git.svg"
+              alt="Git"
+            />
+          </li>
+
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--github"
+              src="images/icons/github.svg"
+              alt="GitHub"
+            />
+          </li>
+
+          <li class="skills__item">
+            <img
+              class="skills__icon skills__icon--openai"
+              src="images/icons/openai.svg"
+              alt="OpenAI"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section class="projects" id="proyectos">
+        <h2 class="projects__title">Proyectos destacados</h2>
+
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__image-container">
+              <img
+                class="project-card__image"
+                src="images/cafeteria.png"
+                alt="Captura del sitio web de la cafetería Triple Espresso"
+              />
+            </div>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">Cafetería Triple Espresso</h3>
+
+              <p class="project-card__description">
+                Sitio web de una cafetería desarrollado con HTML y CSS. Incluye
+                secciones informativas, diseño adaptable y un formulario de
+                reservación.
+              </p>
+
+              <a
+                class="project-card__link"
+                href="https://github.com/fabo2511/web_project_coffeeshop_es"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver código en GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- Segundo proyecto -->
+          <article class="project-card">
+            <div class="project-card__placeholder">
+              <span class="project-card__placeholder-icon"> &lt;/&gt; </span>
+
+              <span class="project-card__placeholder-text">
+                Proyecto en desarrollo
+              </span>
+            </div>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">Mi próximo proyecto web</h3>
+
+              <p class="project-card__description">
+                Proyecto en desarrollo donde estoy poniendo en práctica mis
+                conocimientos de HTML, CSS y diseño responsive.
+              </p>
+
+              <span class="project-card__status"> En desarrollo </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección de contacto -->
+      <section class="contact" id="contacto">
+        <h2 class="contact__title">Contacto</h2>
+
+        <p class="contact__description">
+          ¿Tienes una idea o un proyecto en mente? ¡Hablemos!
+        </p>
+
+        <a
+          class="contact__button"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=fnano914%40gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Envíame un correo
+        </a>
+
+        <div class="contact__social">
+          <a
+            class="contact__link"
+            href="https://github.com/fabo2511"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Mi portafolio · Desarrollo web</p>
+    </footer>
+  </body>
+</html>
