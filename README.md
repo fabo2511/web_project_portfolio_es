@@ -45,4 +45,10 @@ Fabián Salcedo
 
 ## Enlace al sitio web
 
-Próximamente disponible en GitHub Pages.
+Puedes visitar mi portafolio publicado en GitHub Pages:
+
+[Ver mi portafolio](https://fabo2511.github.io/web_project_portfolio_es/)
+
+## Repositorio de GitHub
+
+[Ver el código fuente](https://github.com/fabo2511/web_project_portfolio_es)
